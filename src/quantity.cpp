@@ -35,3 +35,12 @@ std::ranges::transform(quantity.values,this->values.begin(),[value](const double
         return a*value;
     });
 }
+double& Quantity::operator[](unsigned long int n)
+{
+    return this->values[n];
+}
+
+const double& Quantity::operator[](unsigned long int n) const
+{
+    return this->values[n];
+}
