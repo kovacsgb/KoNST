@@ -12,6 +12,7 @@ public:
     virtual void set_element(double value, int indices...) = 0;
     virtual double get_element(int indices...) const = 0;
     virtual void update(Grid& new_grid)=0;
+    virtual size_t getN() =0;
 };
 
 
@@ -30,4 +31,5 @@ class Grid1D : public Grid
         void set_element(double value, int indices...) override;
         double get_element(int indices...) const override;
         void update(Grid& new_grid) override;
+        size_t getN() override;
 };
